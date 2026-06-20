@@ -15,7 +15,7 @@ export interface Project {
   year: string;
 }
 
-export default function PortfolioGrid({ projects }: { projects: Project[] }) {
+export default function PortfolioGrid({ projects = [] }: { projects?: Project[] }) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
