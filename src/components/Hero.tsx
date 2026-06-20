@@ -104,7 +104,7 @@ export default function Hero() {
           <div className={styles.imageFrame}>
             <div className={styles.backRing}></div>
             <Image
-              src="/profile_avatar.png"
+              src="/main-image1 .jpeg"
               alt="Rajesh Vasukuri"
               width={350}
               height={350}

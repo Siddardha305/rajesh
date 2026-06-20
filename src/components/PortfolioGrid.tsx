@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./PortfolioGrid.module.css";
 import ScrollReveal from "./ScrollReveal";
 
-interface Project {
+export interface Project {
   id: number;
   title: string;
   category: string;
@@ -15,48 +15,9 @@ interface Project {
   year: string;
 }
 
-export default function PortfolioGrid() {
+export default function PortfolioGrid({ projects }: { projects: Project[] }) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: "Vibrant Gaming Victory",
-      category: "thumbnails",
-      image: "/gaming_thumbnail.png",
-      description: "A high-conversion, action-packed YouTube thumbnail featuring futuristic characters and glowing 3D typography to boost click-through rates.",
-      client: "Gaming YouTuber",
-      year: "2024",
-    },
-    {
-      id: 2,
-      title: "CHRONOS Sci-Fi Cinematic Poster",
-      category: "posters",
-      image: "/movie_poster.png",
-      description: "Cinematic sci-fi poster using high-end photo manipulation, color grading, and custom metallic text design to capture a cosmic visual concept.",
-      client: "Independent Film Maker",
-      year: "2023",
-    },
-    {
-      id: 3,
-      title: "Future India Academy Brand Campaign",
-      category: "branding",
-      image: "/branding_material.png",
-      description: "Corporate academic branding and marketing material design containing modern clean layouts, corporate vectors, and creative typography.",
-      client: "Future India Academy",
-      year: "2023",
-    },
-    {
-      id: 4,
-      title: "Creative Edge Influencer Kit",
-      category: "branding",
-      image: "/social_creative.png",
-      description: "Sleek social media visual identity banner and cover layout with glowing geometric shapes, designed for high-reach social creators.",
-      client: "Digital Content Influencer",
-      year: "2025",
-    },
-  ];
 
   const filters = [
     { id: "all", label: "All Works" },
