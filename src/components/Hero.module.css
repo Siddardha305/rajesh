@@ -170,8 +170,9 @@
 
 .imageFrame {
   position: relative;
-  width: 380px;
-  height: 380px;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,6 +195,9 @@
 }
 
 .profileImg {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--bg-secondary);
@@ -253,8 +257,7 @@
   }
   
   .imageFrame {
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
   }
 }
 
@@ -320,7 +323,6 @@
   }
   
   .imageFrame {
-    width: 260px;
-    height: 260px;
+    max-width: 260px;
   }
 }
