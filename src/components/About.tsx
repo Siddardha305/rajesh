@@ -6,11 +6,8 @@ import ScrollReveal from "./ScrollReveal";
 export default function About() {
   const skills = [
     { name: "Adobe Photoshop", percentage: 95 },
-    { name: "Adobe Illustrator", percentage: 65 },
+    { name: "Adobe Illustrator", percentage: 30 },
     { name: "Adobe Premiere Pro", percentage: 80 },
-    { name: "Lightroom & Retouching", percentage: 85 },
-    { name: "Social Media Creatives", percentage: 90 },
-    { name: "Thumbnail Design", percentage: 95 },
   ];
 
   return (
@@ -25,8 +22,8 @@ export default function About() {
 
         <div className={styles.bentoGrid}>
           {/* About Me Card */}
-          <ScrollReveal direction="up" delay={50}>
-            <div className={`${styles.bentoCard} ${styles.cardAbout}`}>
+          <ScrollReveal direction="up" delay={50} className={styles.cardAbout}>
+            <div className={styles.bentoCard}>
               <h3 className={styles.cardTitle}>Who I Am</h3>
               <p className={styles.aboutText}>
                 I am a passionate <strong>Graphic Designer</strong> with over 4 years of dedicated experience. 
@@ -37,10 +34,6 @@ export default function About() {
               </p>
               <div className={styles.personalMeta}>
                 <div className={styles.metaItem}>
-                  <span className={styles.metaLabel}>Date of Birth</span>
-                  <span className={styles.metaValue}>05 August 2004</span>
-                </div>
-                <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>Location</span>
                   <span className={styles.metaValue}>Andhra Pradesh, India</span>
                 </div>
@@ -49,8 +42,8 @@ export default function About() {
           </ScrollReveal>
 
           {/* Hobbies Card */}
-          <ScrollReveal direction="up" delay={200}>
-            <div className={`${styles.bentoCard} ${styles.cardHobbies}`}>
+          <ScrollReveal direction="up" delay={200} className={styles.cardHobbies}>
+            <div className={styles.bentoCard}>
               <h3 className={styles.cardTitle}>Hobbies & Passions</h3>
               <div className={styles.hobbiesList}>
                 <div className={styles.hobbyItem}>
@@ -106,8 +99,8 @@ export default function About() {
           </ScrollReveal>
 
           {/* Technical Skills Card */}
-          <ScrollReveal direction="up" delay={100}>
-            <div className={`${styles.bentoCard} ${styles.cardSkills}`}>
+          <ScrollReveal direction="up" delay={100} className={styles.cardSkills}>
+            <div className={styles.bentoCard}>
               <h3 className={styles.cardTitle}>Professional Skills</h3>
               <div className={styles.skillsContainer}>
                 {skills.map((skill, idx) => (
@@ -129,8 +122,8 @@ export default function About() {
           </ScrollReveal>
 
           {/* Education Card */}
-          <ScrollReveal direction="up" delay={250}>
-            <div className={`${styles.bentoCard} ${styles.cardEducation}`}>
+          <ScrollReveal direction="up" delay={250} className={styles.cardEducation}>
+            <div className={styles.bentoCard}>
               <h3 className={styles.cardTitle}>Education</h3>
               <div className={styles.educationTimeline}>
                 <div className={styles.eduItem}>

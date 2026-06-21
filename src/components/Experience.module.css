@@ -119,11 +119,12 @@
   margin-bottom: 0.25rem;
 }
 
-.company {
-  font-size: 1rem;
-  font-weight: 500;
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .bulletList {
@@ -174,13 +175,9 @@
     font-size: 1.2rem;
   }
   
-  .company {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  
-  .bulletItem {
+  .description {
     font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
 

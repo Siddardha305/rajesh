@@ -8,6 +8,7 @@ interface ScrollRevealProps {
   direction?: "up" | "down" | "left" | "right" | "fade";
   delay?: number;
   duration?: number;
+  className?: string;
 }
 
 export default function ScrollReveal({
@@ -15,6 +16,7 @@ export default function ScrollReveal({
   direction = "up",
   delay = 0,
   duration = 800,
+  className = "",
 }: ScrollRevealProps) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export default function ScrollReveal({
   return (
     <div
       ref={ref}
-      className={`${styles.revealContainer} ${isIntersecting ? styles.active : ""} ${getDirectionClass()}`}
+      className={`${styles.revealContainer} ${isIntersecting ? styles.active : ""} ${getDirectionClass()} ${className}`}
       style={{
         transitionDelay: `${delay}ms`,
         transitionDuration: `${duration}ms`,

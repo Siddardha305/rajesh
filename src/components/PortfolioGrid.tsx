@@ -16,19 +16,16 @@ export interface Project {
 }
 
 export default function PortfolioGrid({ projects = [] }: { projects?: Project[] }) {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("thumbnails");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filters = [
-    { id: "all", label: "All Works" },
     { id: "thumbnails", label: "Thumbnails" },
     { id: "posters", label: "Posters" },
-    { id: "branding", label: "Branding" },
+    { id: "branding", label: "Wedding Countdown" },
   ];
 
-  const filteredProjects = activeFilter === "all"
-    ? projects
-    : projects.filter((project) => project.category === activeFilter);
+  const filteredProjects = projects.filter((project) => project.category === activeFilter);
 
   return (
     <section id="portfolio" className={styles.portfolioSection}>
@@ -63,7 +60,7 @@ export default function PortfolioGrid({ projects = [] }: { projects?: Project[] 
                 className={styles.card}
                 onClick={() => setSelectedProject(project)}
               >
-                <div className={styles.imageWrapper}>
+                <div className={`${styles.imageWrapper} ${styles[project.category]}`}>
                   <Image
                     src={project.image}
                     alt={project.title}

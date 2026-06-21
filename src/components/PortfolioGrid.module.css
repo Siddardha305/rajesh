@@ -59,8 +59,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .card {
@@ -82,8 +82,19 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
+}
+
+.thumbnails {
+  aspect-ratio: 16 / 9;
+}
+
+.posters {
+  aspect-ratio: 2 / 3;
+}
+
+.branding {
+  aspect-ratio: 4 / 5;
 }
 
 .projectImg {
@@ -312,6 +323,13 @@
   .closeBtn {
     top: 1rem;
     right: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 

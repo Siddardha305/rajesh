@@ -11,18 +11,18 @@
 
 .glowBg {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 650px;
+  height: 650px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(124, 139, 226, 0.12) 0%,
-    rgba(197, 163, 255, 0.05) 50%,
+    rgba(124, 139, 226, 0.16) 0%,
+    rgba(197, 163, 255, 0.08) 45%,
     rgba(0, 0, 0, 0) 70%
   );
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
+  transition: transform 0.15s cubic-bezier(0.1, 0.8, 0.2, 1);
   z-index: 1;
 }
 
